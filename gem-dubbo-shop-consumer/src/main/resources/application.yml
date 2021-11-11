@@ -1,0 +1,44 @@
+server:
+  address:
+  port: 8082
+  servlet:
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    name: shop-service-consumer
+
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo?serverTimezone=GMT%2B8
+    username: root
+    password: 111111
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+  main:
+    allow-bean-definition-overriding: true
+
+## log config
+#logging:
+#  config: classpath:log4j2.xml
+#  level:
+#    root: info
+#    web: info
+#  file:
+#    name: logs/shop-service-provider.log
+
+# Dubbo Application  nacos
+## The default value of dubbo.application.name is ${spring.application.name}
+## dubbo.application.name=${spring.application.name}
+nacos:
+  service-address: 127.0.0.1
+  port: 8848
+dubbo:
+  registry:
+    address: nacos://${nacos.service-address}:${nacos.port}
+
+  protocol:
+    name: dubbo
+    port: 20882
