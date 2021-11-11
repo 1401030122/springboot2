@@ -32,7 +32,7 @@ public class GemDubboShopConsumerApplication {
 
     @RequestMapping("/sayhello")
     public String sayHello(){
-        return shopService.sayHello("Hello ss Dubbo Nacos!更多原创分享，技术交流，关注：Java技术干货（ID:raysonfang）");
+        return shopService.sayHello("Hello,zhaojie");
     }
     @RequestMapping("/score")
     public Score getScore(@RequestParam("id") Long id){
