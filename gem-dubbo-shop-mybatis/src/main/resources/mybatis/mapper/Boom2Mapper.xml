@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.admin.boom2.mapper.Boom2Mapper">
+
+    <resultMap id="BaseResultMap" type="com.atguigu.admin.boom2.entity.Boom2">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="number" column="number" jdbcType="CHAR"/>
+            <result property="boomTime" column="boom_time" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,number,boom_time
+    </sql>
+</mapper>

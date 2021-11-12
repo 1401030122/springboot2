@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.admin.mapper.GetScoreMapper">
+    <select id="getScore" resultType="com.atguigu.admin.bean.Score">
+    select * from score where id = #{id}
+    </select>
+    <update id="updateScore" parameterType="com.atguigu.admin.bean.Score">
+        update score
+        set name = #{name},subject = #{subject},score = #{score}
+        where id=#{id}
+    </update>
+    <insert id="insertScore" parameterType="com.atguigu.admin.bean.Score"
+    useGeneratedKeys="true" keyProperty="id">
+        insert into score values
+        (#{id},#{name},#{subject},#{score})
+    </insert>
+
+    <delete id="deleteScore" parameterType="integer">
+        delete from score where id=#{id}
+    </delete>
+
+    <select id="getByIdAndName" resultType="com.atguigu.admin.bean.Score">
+        select * from score where id=#{id} and name=#{name};
+    </select>
+
+    <select id="getByMap" resultType="com.atguigu.admin.bean.Score">
+        select * from score where id=#{id} and name=#{name};
+    </select>
+
+    <select id="getByNameLike" resultType="com.atguigu.admin.bean.Score">
+        select * from score where name like #{name};
+    </select>
+
+    <select id="getByIdReturnMap" resultType="map">
+        select * from score where id=#{id}
+    </select>
+
+    <select id="getMultiMapByNameLike" resultType="com.atguigu.admin.bean.Score">
+        select * from score where name like #{name};
+    </select>
+</mapper>

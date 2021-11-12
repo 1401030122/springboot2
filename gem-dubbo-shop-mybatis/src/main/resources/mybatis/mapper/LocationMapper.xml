@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.admin.mapper.LocationMapper">
+    <select id="getById" resultMap="locationMap">
+        SELECT l.id id,
+        l.country country,
+        c.id id1,
+        c.name name,
+        c.subject subject,
+        c.score score1
+
+        FROM location l
+        LEFT JOIN score c
+        ON l.id=c.location_id
+        WHERE l.id= 2
+    </select>
+
+    <resultMap id="locationMap" type="com.atguigu.admin.bean.Location">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="country" jdbcType="VARCHAR" property="country"/>
+        <collection property="scores" ofType="com.atguigu.admin.bean.Score">
+            <id column="id1" property="id" jdbcType="INTEGER"/>
+            <result column="name" property="name" jdbcType="VARCHAR"/>
+            <result column="subject" property="subject" jdbcType="VARCHAR"/>
+            <result column="score1" property="score" jdbcType="INTEGER"/>
+        </collection>
+
+    </resultMap>
+</mapper>
