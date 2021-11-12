@@ -1,5 +1,11 @@
 package com.atguigu.admin;
 
+/** 
+ *  @Author   ZhaoJie
+ *  @Version  1.0
+ *  @Data     2021/11/12 17:08
+ *  @Email    17854262969@163.com
+*/
 
 import com.atguigu.admin.bean.Location;
 import com.atguigu.admin.bean.Score;
@@ -170,10 +176,12 @@ class Boot05WebAdminApplicationTests {
 
     @Test
     public void testRedis(){
+
+        Score score = scoreServicePlus.getById(3);
         ValueOperations<String,String> operations= redisTemplate.opsForValue();
-        operations.set("hello","world");
-        String hello = operations.get("hello");
-        System.out.println("测试结果为："+hello);
+        operations.set("score",score.getName());
+        String hello = operations.get("score");
+        System.out.println("测试结果为："+score);
     }
 
 }
