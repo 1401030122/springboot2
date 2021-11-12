@@ -1,6 +1,11 @@
 package com.atguigu.admin;
 
-
+/** 
+ *  @Author   ZhaoJie
+ *  @Version  1.0
+ *  @Data     2021/11/12 10:00
+ *  @Email    17854262969@163.com
+*/
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
