@@ -30,6 +30,14 @@ spring:
     name: mybatis-application
   main:
     allow-bean-definition-overriding: true
+
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+#    url: redis://smy:199510Smy@r-bp1otwx5ltzhjy2fenpd.redis.rds.aliyuncs.com:6379
+
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml

@@ -12,6 +12,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.*;
@@ -159,6 +161,19 @@ class Boot05WebAdminApplicationTests {
             e.printStackTrace();
         }
 
+    }
+
+
+//    test redis 的相关模块
+    @Autowired
+    StringRedisTemplate redisTemplate;
+
+    @Test
+    public void testRedis(){
+        ValueOperations<String,String> operations= redisTemplate.opsForValue();
+        operations.set("hello","world");
+        String hello = operations.get("hello");
+        System.out.println("测试结果为："+hello);
     }
 
 }

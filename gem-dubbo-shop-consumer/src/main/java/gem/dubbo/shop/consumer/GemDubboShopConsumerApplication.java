@@ -1,5 +1,10 @@
 package gem.dubbo.shop.consumer;
-
+/**
+ *  @Author   ZhaoJie
+ *  @Version  1.0
+ *  @Data     2021/11/12 10:00
+ *  @Email    17854262969@163.com
+*/
 
 //import com.atguigu.admin.bean.Score;
 //import com.atguigu.admin.mapper.GetScoreMapper;
