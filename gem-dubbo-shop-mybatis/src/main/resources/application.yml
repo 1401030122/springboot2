@@ -35,7 +35,7 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
-    password:
+    password: 12345
 #    url: redis://smy:199510Smy@r-bp1otwx5ltzhjy2fenpd.redis.rds.aliyuncs.com:6379
 
 mybatis:
