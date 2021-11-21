@@ -7,14 +7,15 @@ import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import javax.rmi.ssl.SslRMIClientSocketFactory;
 import java.util.List;
 
 @Service
-@DubboService
+@DubboService(group = "scoreGroup-provider")
 public class ScoreServicePlusImp implements ScoreServicePlus {
 
-    @Autowired
+    @Resource
     ScoreMapperPlus scoreMapperPlus;
     @Override
     public Score getById(Integer id){
