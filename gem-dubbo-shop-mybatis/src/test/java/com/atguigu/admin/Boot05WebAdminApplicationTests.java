@@ -182,6 +182,8 @@ class Boot05WebAdminApplicationTests {
         operations.set("score",score.getName());
         String hello = operations.get("score");
         System.out.println("测试结果为："+score);
+        Integer[] integers = new Integer[5];
+
     }
 
 }

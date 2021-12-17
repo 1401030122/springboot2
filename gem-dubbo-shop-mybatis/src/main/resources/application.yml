@@ -32,6 +32,8 @@ spring:
     allow-bean-definition-overriding: true
 
 
+
+
   redis:
     host: 127.0.0.1
     port: 6379
@@ -59,3 +61,5 @@ mybatis-plus:
 # Dubbo Application  nacos
 ## The default value of dubbo.application.name is ${spring.application.name}
 ## dubbo.application.name=${spring.application.name}
+server:
+  port: 8084

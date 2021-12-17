@@ -35,6 +35,7 @@ class GemDubboShopConsumerApplicationTests {
             integers.add(4);
 
             List<Score> scores = scoreServicePlus.getByEach(integers);
+
             log.info("------查询结果为:{}",scores);
             log.info("------查询结果为:{}",integers);
         } catch (Exception e) {

@@ -101,13 +101,6 @@
         <!-- Dubbo -->
 
 
-        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.dubbo/dubbo &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.dubbo</groupId>-->
-<!--            <artifactId>dubbo</artifactId>-->
-<!--            <version>3.0.0</version>-->
-<!--        </dependency>-->
-
 
 
         <!-- Spring Boot Dubbo dependencies -->

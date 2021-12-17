@@ -5,6 +5,7 @@ import com.atguigu.admin.boom2.entity.Boom2;
 import com.atguigu.admin.boom2.service.Boom2Service;
 import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,4 +21,14 @@ public class MybatisTestController {
     public Boom2 getBoom2(Long id){
        return boom2Service.getById(id);
    }
+
+    @ResponseBody
+    @GetMapping("/hello")
+//    @CrossOrigin("http://localhost:8081")
+    public String vueHello(){
+        String data ="sss";
+       return "hello world";
+    }
+
+
 }
